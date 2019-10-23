@@ -2,6 +2,42 @@ Changelog
 =========
 
 
+v1.0.0 (2019-10-23)
+-------------------
+
+New
+~~~
+- Validate Makefile target. [Marek Cermak]
+- Makefile release target. [Marek Cermak]
+
+  Added release target to Makefile for easier versioning.
+
+  Signed-off-by: Marek Cermak <macermak@redhat.com>
+
+  modified:   Makefile
+  modified:   Pipfile
+- Script to generate CHANGELOG. [Marek Cermak]
+
+  Signed-off-by: Marek Cermak <macermak@redhat.com>
+
+  new file:   .gitchangelog.rc
+  new file:   CHANGELOG.md
+  new file:   scripts/generate_changelog.sh
+  modified:   MANIFEST.in
+
+Changes
+~~~~~~~
+- Release name contains only MAJOR.MINOR. [Marek Cermak]
+
+Fix
+~~~
+- Fix missing shells in Makefile. [Marek Cermak]
+
+Other
+~~~~~
+- Release 1.0. [Marek Cermak]
+
+
 v1.0.0a1 (2019-10-22)
 ---------------------
 - :tada: Release 1.0.0a1. [Marek Cermak]
