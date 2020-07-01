@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 PACKAGE_NAME        = workflows.client
 PACKAGE_DESCRIPTION = Python client for Argo Workflows
 
@@ -42,7 +43,7 @@ CLIENT_VERSION    ?= $(shell b="${GIT_BRANCH}"; v="$${b/release-/}.0"; echo "$${
 
 KUBERNETES_BRANCH ?= release-1.14
 
-ARGO_VERSION      ?= master
+ARGO_VERSION      ?= release-2.8
 ARGO_API_GROUP    ?= argoproj.io
 ARGO_API_VERSION  ?= v1alpha1
 
