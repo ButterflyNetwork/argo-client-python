@@ -12,7 +12,7 @@
   "info": {
     "description": "Python client for Argo Workflows",
     "title": "Argo",
-    "version": "release-2.8"
+    "version": "release-2.9"
   },
   "host": "localhost:2746",
   "paths": {
@@ -291,6 +291,7 @@
         "parameters": [
           {
             "type": "string",
+            "description": "DEPRECATED: This field is ignored.",
             "name": "name",
             "in": "path",
             "required": true
@@ -565,6 +566,7 @@
           },
           {
             "type": "string",
+            "description": "DEPRECATED: This field is ignored.",
             "name": "name",
             "in": "path",
             "required": true
@@ -962,6 +964,7 @@
           },
           {
             "type": "string",
+            "description": "DEPRECATED: This field is ignored.",
             "name": "name",
             "in": "path",
             "required": true
@@ -2884,10 +2887,28 @@
       "type": "object",
       "properties": {
         "name": {
+          "description": "DEPRECATED: This field is ignored.",
           "type": "string"
         },
         "template": {
           "$ref": "#/definitions/v1alpha1.ClusterWorkflowTemplate"
+        }
+      }
+    },
+    "v1alpha1.Condition": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "description": "Message is the condition message",
+          "type": "string"
+        },
+        "status": {
+          "description": "Status is the status of the condition",
+          "type": "string"
+        },
+        "type": {
+          "description": "Type is the type of condition",
+          "type": "string"
         }
       }
     },
@@ -3044,6 +3065,13 @@
             "$ref": "#/definitions/v1.ObjectReference"
           }
         },
+        "conditions": {
+          "description": "Conditions is a list of conditions the CronWorkflow may have",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/v1alpha1.Condition"
+          }
+        },
         "lastScheduledTime": {
           "description": "LastScheduleTime is the last time the CronWorkflow was scheduled",
           "type": "string",
@@ -3072,6 +3100,10 @@
           "items": {
             "type": "string"
           }
+        },
+        "depends": {
+          "description": "Depends are name of other targets which this depends on",
+          "type": "string"
         },
         "name": {
           "description": "Name is the name of the target",
@@ -3569,7 +3601,7 @@
       }
     },
     "v1alpha1.OSSArtifact": {
-      "description": "OSSArtifact is the location of an OSS artifact",
+      "description": "OSSArtifact is the location of an Alibaba Cloud OSS artifact",
       "type": "object",
       "required": [
         "endpoint",
@@ -4014,10 +4046,6 @@
           "description": "GenerateName overrides metadata.generateName",
           "type": "string"
         },
-        "instanceID": {
-          "description": "InstanceID binds the Resource to the specified instance ID",
-          "type": "string"
-        },
         "labels": {
           "description": "Labels adds to metadata.labels",
           "type": "string"
@@ -4284,7 +4312,7 @@
       "type": "object",
       "properties": {
         "clusterScope": {
-          "description": "ClusterScope indicates the referred template is cluster scoped (i.e., a ClusterWorkflowTemplate).",
+          "description": "ClusterScope indicates the referred template is cluster scoped (i.e. a ClusterWorkflowTemplate).",
           "type": "boolean"
         },
         "name": {
@@ -4308,6 +4336,7 @@
           "$ref": "#/definitions/v1alpha1.CronWorkflow"
         },
         "name": {
+          "description": "DEPRECATED: This field is ignored.",
           "type": "string"
         },
         "namespace": {
@@ -4543,23 +4572,6 @@
         }
       }
     },
-    "v1alpha1.WorkflowCondition": {
-      "type": "object",
-      "properties": {
-        "message": {
-          "description": "Message is the condition message",
-          "type": "string"
-        },
-        "status": {
-          "description": "Status is the status of the condition",
-          "type": "string"
-        },
-        "type": {
-          "description": "Type is the type of condition",
-          "type": "string"
-        }
-      }
-    },
     "v1alpha1.WorkflowCreateRequest": {
       "type": "object",
       "properties": {
@@ -4567,6 +4579,7 @@
           "$ref": "#/definitions/v1.CreateOptions"
         },
         "instanceID": {
+          "description": "This field is no longer used.",
           "type": "string"
         },
         "namespace": {
@@ -4841,6 +4854,10 @@
           },
           "x-kubernetes-patch-merge-key": "name",
           "x-kubernetes-patch-strategy": "merge"
+        },
+        "workflowTemplateRef": {
+          "description": "WorkflowTemplateRef holds a reference to a WorkflowTemplate for execution",
+          "$ref": "#/definitions/v1alpha1.WorkflowTemplateRef"
         }
       }
     },
@@ -4856,7 +4873,7 @@
           "description": "Conditions is a list of conditions the Workflow may have",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/v1alpha1.WorkflowCondition"
+            "$ref": "#/definitions/v1alpha1.Condition"
           }
         },
         "finishedAt": {
@@ -4913,6 +4930,10 @@
           "additionalProperties": {
             "$ref": "#/definitions/v1alpha1.Template"
           }
+        },
+        "storedWorkflowTemplateSpec": {
+          "description": "StoredWorkflowSpec stores the WorkflowTemplate spec for future execution.",
+          "$ref": "#/definitions/v1alpha1.WorkflowSpec"
         }
       }
     },
@@ -4987,9 +5008,6 @@
     "v1alpha1.WorkflowSubmitRequest": {
       "type": "object",
       "properties": {
-        "createOptions": {
-          "$ref": "#/definitions/v1.CreateOptions"
-        },
         "namespace": {
           "type": "string"
         },
@@ -5090,6 +5108,20 @@
         },
         "metadata": {
           "$ref": "#/definitions/v1.ListMeta"
+        }
+      }
+    },
+    "v1alpha1.WorkflowTemplateRef": {
+      "description": "WorkflowTemplateRef is a reference to a WorkflowTemplate resource.",
+      "type": "object",
+      "properties": {
+        "clusterScope": {
+          "description": "ClusterScope indicates the referred template is cluster scoped (i.e. a ClusterWorkflowTemplate).",
+          "type": "boolean"
+        },
+        "name": {
+          "description": "Name is the resource name of the workflow template.",
+          "type": "string"
         }
       }
     },
@@ -5268,6 +5300,10 @@
           },
           "x-kubernetes-patch-merge-key": "name",
           "x-kubernetes-patch-strategy": "merge"
+        },
+        "workflowTemplateRef": {
+          "description": "WorkflowTemplateRef holds a reference to a WorkflowTemplate for execution",
+          "$ref": "#/definitions/v1alpha1.WorkflowTemplateRef"
         }
       }
     },
@@ -5275,6 +5311,7 @@
       "type": "object",
       "properties": {
         "name": {
+          "description": "DEPRECATED: This field is ignored.",
           "type": "string"
         },
         "namespace": {

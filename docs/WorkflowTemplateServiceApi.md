@@ -291,7 +291,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = workflows.client.WorkflowTemplateServiceApi()
 namespace = 'namespace_example' # str | 
-name = 'name_example' # str | 
+name = 'name_example' # str | DEPRECATED: This field is ignored.
 body = workflows.client.V1alpha1WorkflowTemplateUpdateRequest() # V1alpha1WorkflowTemplateUpdateRequest | 
 
 try:
@@ -306,7 +306,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **namespace** | **str**|  | 
- **name** | **str**|  | 
+ **name** | **str**| DEPRECATED: This field is ignored. | 
  **body** | [**V1alpha1WorkflowTemplateUpdateRequest**](V1alpha1WorkflowTemplateUpdateRequest.md)|  | 
 
 ### Return type

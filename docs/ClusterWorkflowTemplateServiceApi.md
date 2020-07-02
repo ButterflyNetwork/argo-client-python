@@ -280,7 +280,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = workflows.client.ClusterWorkflowTemplateServiceApi()
-name = 'name_example' # str | 
+name = 'name_example' # str | DEPRECATED: This field is ignored.
 body = workflows.client.V1alpha1ClusterWorkflowTemplateUpdateRequest() # V1alpha1ClusterWorkflowTemplateUpdateRequest | 
 
 try:
@@ -294,7 +294,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**|  | 
+ **name** | **str**| DEPRECATED: This field is ignored. | 
  **body** | [**V1alpha1ClusterWorkflowTemplateUpdateRequest**](V1alpha1ClusterWorkflowTemplateUpdateRequest.md)|  | 
 
 ### Return type

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **arguments** | [**V1alpha1Arguments**](V1alpha1Arguments.md) | Arguments are the parameter and artifact arguments to the template | [optional] 
 **continue_on** | [**V1alpha1ContinueOn**](V1alpha1ContinueOn.md) | ContinueOn makes argo to proceed with the following step even if this step fails. Errors and Failed states can be specified | [optional] 
 **dependencies** | **list[str]** | Dependencies are name of other targets which this depends on | [optional] 
+**depends** | **str** | Depends are name of other targets which this depends on | [optional] 
 **name** | **str** | Name is the name of the target | 
 **on_exit** | **str** | OnExit is a template reference which is invoked at the end of the template, irrespective of the success, failure, or error of the primary template. | [optional] 
 **template** | **str** | Name of template to execute | [optional] 
