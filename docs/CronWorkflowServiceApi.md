@@ -291,7 +291,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = workflows.client.CronWorkflowServiceApi()
 namespace = 'namespace_example' # str | 
-name = 'name_example' # str | DEPRECATED: This field is ignored.
+name = 'name_example' # str | 
 body = workflows.client.V1alpha1UpdateCronWorkflowRequest() # V1alpha1UpdateCronWorkflowRequest | 
 
 try:
@@ -306,7 +306,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **namespace** | **str**|  | 
- **name** | **str**| DEPRECATED: This field is ignored. | 
+ **name** | **str**|  | 
  **body** | [**V1alpha1UpdateCronWorkflowRequest**](V1alpha1UpdateCronWorkflowRequest.md)|  | 
 
 ### Return type

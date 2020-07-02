@@ -1,4 +1,4 @@
-# V1alpha1Condition
+# V1alpha1WorkflowCondition
 
 ## Properties
 Name | Type | Description | Notes

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | DEPRECATED: This field is ignored. | [optional] 
+**name** | **str** |  | [optional] 
 **namespace** | **str** |  | [optional] 
 **template** | [**V1alpha1WorkflowTemplate**](V1alpha1WorkflowTemplate.md) |  | [optional] 
 

@@ -43,7 +43,7 @@ CLIENT_VERSION    ?= $(shell b="${GIT_BRANCH}"; v="$${b/release-/}.0"; echo "$${
 
 KUBERNETES_BRANCH ?= release-1.15
 
-ARGO_VERSION      ?= release-2.9
+ARGO_VERSION      ?= release-2.8
 ARGO_API_GROUP    ?= argoproj.io
 ARGO_API_VERSION  ?= v1alpha1
 
@@ -149,7 +149,8 @@ preprocess:
 	# This is an unpleasant workaround, since OpenAPI 2.0 does not allow `oneOf`
 	jq -r '.definitions."v1alpha1.DAGTask".required = ["name"]' ${OPENAPI_SPEC} |\
 	sponge ${OPENAPI_SPEC}
-
+	jq -r '.definitions."v1alpha1.Prometheus".required = ["name", "labels"]' ${OPENAPI_SPEC} |\
+        sponge ${OPENAPI_SPEC}
 
 client:
 	@echo "Generating Argo ${ARGO_VERSION} client"
