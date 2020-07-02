@@ -1,4 +1,4 @@
-# IoK8sApimachineryPkgApisMetaV1ManagedFieldsEntry
+# V1ManagedFieldsEntry
 
 ## Properties
 Name | Type | Description | Notes

@@ -33,7 +33,7 @@ class V1PersistentVolumeClaim(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
+        'metadata': 'V1ObjectMeta',
         'spec': 'V1PersistentVolumeClaimSpec',
         'status': 'V1PersistentVolumeClaimStatus'
     }
@@ -120,7 +120,7 @@ class V1PersistentVolumeClaim(object):
         Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata  # noqa: E501
 
         :return: The metadata of this V1PersistentVolumeClaim.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: V1ObjectMeta
         """
         return self._metadata
 
@@ -131,7 +131,7 @@ class V1PersistentVolumeClaim(object):
         Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata  # noqa: E501
 
         :param metadata: The metadata of this V1PersistentVolumeClaim.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
+        :type: V1ObjectMeta
         """
 
         self._metadata = metadata

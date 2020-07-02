@@ -1,4 +1,4 @@
-# IoK8sApimachineryPkgApisMetaV1StatusCause
+# V1StatusCause
 
 ## Properties
 Name | Type | Description | Notes

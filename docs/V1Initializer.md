@@ -1,4 +1,4 @@
-# IoK8sApimachineryPkgApisMetaV1Initializer
+# V1Initializer
 
 ## Properties
 Name | Type | Description | Notes

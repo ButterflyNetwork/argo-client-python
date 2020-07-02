@@ -33,7 +33,7 @@ class V1alpha1Workflow(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
+        'metadata': 'V1ObjectMeta',
         'spec': 'V1alpha1WorkflowSpec',
         'status': 'V1alpha1WorkflowStatus'
     }
@@ -116,7 +116,7 @@ class V1alpha1Workflow(object):
 
 
         :return: The metadata of this V1alpha1Workflow.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: V1ObjectMeta
         """
         return self._metadata
 
@@ -126,7 +126,7 @@ class V1alpha1Workflow(object):
 
 
         :param metadata: The metadata of this V1alpha1Workflow.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
+        :type: V1ObjectMeta
         """
         if metadata is None:
             raise ValueError("Invalid value for `metadata`, must not be `None`")  # noqa: E501

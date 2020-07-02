@@ -1,4 +1,4 @@
-# IoK8sApimachineryPkgApisMetaV1ListMeta
+# V1ListMeta
 
 ## Properties
 Name | Type | Description | Notes
