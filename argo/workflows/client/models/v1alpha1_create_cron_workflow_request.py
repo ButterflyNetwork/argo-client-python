@@ -31,7 +31,7 @@ class V1alpha1CreateCronWorkflowRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'create_options': 'IoK8sApimachineryPkgApisMetaV1CreateOptions',
+        'create_options': 'V1CreateOptions',
         'cron_workflow': 'V1alpha1CronWorkflow',
         'namespace': 'str'
     }
@@ -63,7 +63,7 @@ class V1alpha1CreateCronWorkflowRequest(object):
 
 
         :return: The create_options of this V1alpha1CreateCronWorkflowRequest.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1CreateOptions
+        :rtype: V1CreateOptions
         """
         return self._create_options
 
@@ -73,7 +73,7 @@ class V1alpha1CreateCronWorkflowRequest(object):
 
 
         :param create_options: The create_options of this V1alpha1CreateCronWorkflowRequest.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1CreateOptions
+        :type: V1CreateOptions
         """
 
         self._create_options = create_options

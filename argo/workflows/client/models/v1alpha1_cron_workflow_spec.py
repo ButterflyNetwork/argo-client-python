@@ -38,7 +38,7 @@ class V1alpha1CronWorkflowSpec(object):
         'successful_jobs_history_limit': 'int',
         'suspend': 'bool',
         'timezone': 'str',
-        'workflow_metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
+        'workflow_metadata': 'V1ObjectMeta',
         'workflow_spec': 'V1alpha1WorkflowSpec'
     }
 
@@ -255,7 +255,7 @@ class V1alpha1CronWorkflowSpec(object):
         WorkflowMetadata contains some metadata of the workflow to be run  # noqa: E501
 
         :return: The workflow_metadata of this V1alpha1CronWorkflowSpec.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: V1ObjectMeta
         """
         return self._workflow_metadata
 
@@ -266,7 +266,7 @@ class V1alpha1CronWorkflowSpec(object):
         WorkflowMetadata contains some metadata of the workflow to be run  # noqa: E501
 
         :param workflow_metadata: The workflow_metadata of this V1alpha1CronWorkflowSpec.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
+        :type: V1ObjectMeta
         """
 
         self._workflow_metadata = workflow_metadata

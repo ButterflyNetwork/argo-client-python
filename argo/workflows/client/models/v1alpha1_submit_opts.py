@@ -37,7 +37,7 @@ class V1alpha1SubmitOpts(object):
         'instance_id': 'str',
         'labels': 'str',
         'name': 'str',
-        'owner_reference': 'IoK8sApimachineryPkgApisMetaV1OwnerReference',
+        'owner_reference': 'V1OwnerReference',
         'parameter_file': 'str',
         'parameters': 'list[str]',
         'server_dry_run': 'bool',
@@ -242,7 +242,7 @@ class V1alpha1SubmitOpts(object):
         OwnerReference creates a metadata.ownerReference  # noqa: E501
 
         :return: The owner_reference of this V1alpha1SubmitOpts.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1OwnerReference
+        :rtype: V1OwnerReference
         """
         return self._owner_reference
 
@@ -253,7 +253,7 @@ class V1alpha1SubmitOpts(object):
         OwnerReference creates a metadata.ownerReference  # noqa: E501
 
         :param owner_reference: The owner_reference of this V1alpha1SubmitOpts.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1OwnerReference
+        :type: V1OwnerReference
         """
 
         self._owner_reference = owner_reference

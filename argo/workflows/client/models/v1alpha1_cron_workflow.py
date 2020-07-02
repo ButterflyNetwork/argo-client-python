@@ -33,7 +33,7 @@ class V1alpha1CronWorkflow(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
+        'metadata': 'V1ObjectMeta',
         'spec': 'V1alpha1CronWorkflowSpec',
         'status': 'V1alpha1CronWorkflowStatus'
     }
@@ -117,7 +117,7 @@ class V1alpha1CronWorkflow(object):
 
 
         :return: The metadata of this V1alpha1CronWorkflow.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: V1ObjectMeta
         """
         return self._metadata
 
@@ -127,7 +127,7 @@ class V1alpha1CronWorkflow(object):
 
 
         :param metadata: The metadata of this V1alpha1CronWorkflow.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
+        :type: V1ObjectMeta
         """
 
         self._metadata = metadata

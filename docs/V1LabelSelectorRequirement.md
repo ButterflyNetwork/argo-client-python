@@ -1,4 +1,4 @@
-# IoK8sApimachineryPkgApisMetaV1LabelSelectorRequirement
+# V1LabelSelectorRequirement
 
 ## Properties
 Name | Type | Description | Notes

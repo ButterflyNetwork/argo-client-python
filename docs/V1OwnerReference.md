@@ -1,4 +1,4 @@
-# IoK8sApimachineryPkgApisMetaV1OwnerReference
+# V1OwnerReference
 
 ## Properties
 Name | Type | Description | Notes

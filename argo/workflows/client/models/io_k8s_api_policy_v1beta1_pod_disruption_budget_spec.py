@@ -33,7 +33,7 @@ class IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec(object):
     swagger_types = {
         'max_unavailable': 'str',
         'min_available': 'str',
-        'selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector'
+        'selector': 'V1LabelSelector'
     }
 
     attribute_map = {
@@ -110,7 +110,7 @@ class IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec(object):
         Label query over pods whose evictions are managed by the disruption budget.  # noqa: E501
 
         :return: The selector of this IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
+        :rtype: V1LabelSelector
         """
         return self._selector
 
@@ -121,7 +121,7 @@ class IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec(object):
         Label query over pods whose evictions are managed by the disruption budget.  # noqa: E501
 
         :param selector: The selector of this IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
+        :type: V1LabelSelector
         """
 
         self._selector = selector

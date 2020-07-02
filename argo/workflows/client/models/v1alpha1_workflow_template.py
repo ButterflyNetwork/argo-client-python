@@ -33,7 +33,7 @@ class V1alpha1WorkflowTemplate(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
+        'metadata': 'V1ObjectMeta',
         'spec': 'V1alpha1WorkflowTemplateSpec'
     }
 
@@ -113,7 +113,7 @@ class V1alpha1WorkflowTemplate(object):
 
 
         :return: The metadata of this V1alpha1WorkflowTemplate.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: V1ObjectMeta
         """
         return self._metadata
 
@@ -123,7 +123,7 @@ class V1alpha1WorkflowTemplate(object):
 
 
         :param metadata: The metadata of this V1alpha1WorkflowTemplate.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
+        :type: V1ObjectMeta
         """
 
         self._metadata = metadata

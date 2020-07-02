@@ -136,6 +136,7 @@ spec:
 preprocess:
 	@echo "Preprocessing API specs"
 	python scripts/preprocess.py -i ${OPENAPI_SPEC} \
+		-d 'io.k8s.apimachinery.pkg.apis.meta' \
 		-d 'cronio.argoproj.workflow' \
 		-d 'io.argoproj.workflow' \
 		-d 'io.k8s.api.core' \

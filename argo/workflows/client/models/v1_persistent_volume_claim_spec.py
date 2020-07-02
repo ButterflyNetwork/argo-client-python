@@ -34,7 +34,7 @@ class V1PersistentVolumeClaimSpec(object):
         'access_modes': 'list[str]',
         'data_source': 'V1TypedLocalObjectReference',
         'resources': 'V1ResourceRequirements',
-        'selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector',
+        'selector': 'V1LabelSelector',
         'storage_class_name': 'str',
         'volume_mode': 'str',
         'volume_name': 'str'
@@ -153,7 +153,7 @@ class V1PersistentVolumeClaimSpec(object):
         A label query over volumes to consider for binding.  # noqa: E501
 
         :return: The selector of this V1PersistentVolumeClaimSpec.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
+        :rtype: V1LabelSelector
         """
         return self._selector
 
@@ -164,7 +164,7 @@ class V1PersistentVolumeClaimSpec(object):
         A label query over volumes to consider for binding.  # noqa: E501
 
         :param selector: The selector of this V1PersistentVolumeClaimSpec.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
+        :type: V1LabelSelector
         """
 
         self._selector = selector

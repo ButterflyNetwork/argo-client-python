@@ -34,7 +34,7 @@ class V1alpha1ClusterWorkflowTemplateList(object):
         'api_version': 'str',
         'items': 'list[V1alpha1ClusterWorkflowTemplate]',
         'kind': 'str',
-        'metadata': 'IoK8sApimachineryPkgApisMetaV1ListMeta'
+        'metadata': 'V1ListMeta'
     }
 
     attribute_map = {
@@ -135,7 +135,7 @@ class V1alpha1ClusterWorkflowTemplateList(object):
 
 
         :return: The metadata of this V1alpha1ClusterWorkflowTemplateList.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1ListMeta
+        :rtype: V1ListMeta
         """
         return self._metadata
 
@@ -145,7 +145,7 @@ class V1alpha1ClusterWorkflowTemplateList(object):
 
 
         :param metadata: The metadata of this V1alpha1ClusterWorkflowTemplateList.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1ListMeta
+        :type: V1ListMeta
         """
         if metadata is None:
             raise ValueError("Invalid value for `metadata`, must not be `None`")  # noqa: E501

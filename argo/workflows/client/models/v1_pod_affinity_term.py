@@ -31,7 +31,7 @@ class V1PodAffinityTerm(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'label_selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector',
+        'label_selector': 'V1LabelSelector',
         'namespaces': 'list[str]',
         'topology_key': 'str'
     }
@@ -63,7 +63,7 @@ class V1PodAffinityTerm(object):
         A label query over a set of resources, in this case pods.  # noqa: E501
 
         :return: The label_selector of this V1PodAffinityTerm.  # noqa: E501
-        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
+        :rtype: V1LabelSelector
         """
         return self._label_selector
 
@@ -74,7 +74,7 @@ class V1PodAffinityTerm(object):
         A label query over a set of resources, in this case pods.  # noqa: E501
 
         :param label_selector: The label_selector of this V1PodAffinityTerm.  # noqa: E501
-        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
+        :type: V1LabelSelector
         """
 
         self._label_selector = label_selector
