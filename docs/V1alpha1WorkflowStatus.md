@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **compressed_nodes** | **str** | Compressed and base64 decoded Nodes map | [optional] 
-**conditions** | [**list[V1alpha1WorkflowCondition]**](V1alpha1WorkflowCondition.md) | Conditions is a list of conditions the Workflow may have | [optional] 
+**conditions** | [**list[V1alpha1Condition]**](V1alpha1Condition.md) | Conditions is a list of conditions the Workflow may have | [optional] 
 **finished_at** | **datetime** | Time at which this workflow completed | [optional] 
 **message** | **str** | A human readable message indicating details about why the workflow is in this condition. | [optional] 
 **nodes** | [**dict(str, V1alpha1NodeStatus)**](V1alpha1NodeStatus.md) | Nodes is a mapping between a node ID and the node&#39;s status. | [optional] 
@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **resources_duration** | **dict(str, int)** | ResourcesDuration is the total for the workflow | [optional] 
 **started_at** | **datetime** | Time at which this workflow started | [optional] 
 **stored_templates** | [**dict(str, V1alpha1Template)**](V1alpha1Template.md) | StoredTemplates is a mapping between a template ref and the node&#39;s status. | [optional] 
+**stored_workflow_template_spec** | [**V1alpha1WorkflowSpec**](V1alpha1WorkflowSpec.md) | StoredWorkflowSpec stores the WorkflowTemplate spec for future execution. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

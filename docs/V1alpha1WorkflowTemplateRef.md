@@ -1,12 +1,10 @@
-# V1alpha1WorkflowSubmitRequest
+# V1alpha1WorkflowTemplateRef
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**namespace** | **str** |  | [optional] 
-**resource_kind** | **str** |  | [optional] 
-**resource_name** | **str** |  | [optional] 
-**submit_options** | [**V1alpha1SubmitOpts**](V1alpha1SubmitOpts.md) |  | [optional] 
+**cluster_scope** | **bool** | ClusterScope indicates the referred template is cluster scoped (i.e. a ClusterWorkflowTemplate). | [optional] 
+**name** | **str** | Name is the resource name of the workflow template. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

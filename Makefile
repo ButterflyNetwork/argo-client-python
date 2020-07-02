@@ -43,7 +43,7 @@ CLIENT_VERSION    ?= $(shell b="${GIT_BRANCH}"; v="$${b/release-/}.0"; echo "$${
 
 KUBERNETES_BRANCH ?= release-1.15
 
-ARGO_VERSION      ?= release-2.8
+ARGO_VERSION      ?= release-2.9
 ARGO_API_GROUP    ?= argoproj.io
 ARGO_API_VERSION  ?= v1alpha1
 

@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **ttl_strategy** | [**V1alpha1TTLStrategy**](V1alpha1TTLStrategy.md) | TTLStrategy limits the lifetime of a Workflow that has finished execution depending on if it Succeeded or Failed. If this struct is set, once the Workflow finishes, it will be deleted after the time to live expires. If this field is unset, the controller config map will hold the default values. | [optional] 
 **volume_claim_templates** | [**list[V1PersistentVolumeClaim]**](V1PersistentVolumeClaim.md) | VolumeClaimTemplates is a list of claims that containers are allowed to reference. The Workflow controller will create the claims at the beginning of the workflow and delete the claims upon completion of the workflow | [optional] 
 **volumes** | [**list[V1Volume]**](V1Volume.md) | Volumes is a list of volumes that can be mounted by containers in a io.argoproj.workflow.v1alpha1. | [optional] 
+**workflow_template_ref** | [**V1alpha1WorkflowTemplateRef**](V1alpha1WorkflowTemplateRef.md) | WorkflowTemplateRef holds a reference to a WorkflowTemplate for execution | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
